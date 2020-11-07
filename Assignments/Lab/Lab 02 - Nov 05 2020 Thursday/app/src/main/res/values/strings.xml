@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lab02</string>
+    <string name="image_View2">TODO</string>
+    <string name="student_login">Student Login</string>
+    <string name="user_label_name">Email:</string>
+    <string name="password_label">Password:</string>
+</resources>
