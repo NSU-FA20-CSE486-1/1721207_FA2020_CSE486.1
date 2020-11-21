@@ -4,4 +4,10 @@
     <string name="student_login">Student Login</string>
     <string name="user_label_name">Email:</string>
     <string name="password_label">Password:</string>
+    <string name="email_address">Your Email</string>
+    <string name="user_password">Your password</string>
+    <string name="toast_msg_success">Login successful</string>
+    <string name="toast_msg_unsuccess">Incorrect Credentials</string>
+    <string name="login_checkbox">Remember this device</string>
+    <string name="login_button_msg">Sign in!</string>
 </resources>
