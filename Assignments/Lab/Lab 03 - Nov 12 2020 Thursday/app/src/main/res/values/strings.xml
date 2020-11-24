@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="activity_brief">Enter your mobile number</string>
+    <string name="user_phone">Your Mobile Number</string>
+    <string name="register_done_button">Register</string>
+    <string name="activity2_name">Second Activity</string>
+    <string name="text_header">Registered for the following number</string>
+</resources>
