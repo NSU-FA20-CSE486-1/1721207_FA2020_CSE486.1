@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Intent_Advanced</string>
+    <string name="shopping_list">Your Grocery list!</string>
+    <string name="button_add_item">Add items!</string>
+    <string name="add_grocery1">Add Rice</string>
+    <string name="add_grocery2">Add Cheese</string>
+    <string name="add_grocery3">Add Noodles</string>
+    <string name="add_grocery4">Add Paratha</string>
+    <string name="rice">Rice</string>
+    <string name="cheese">Cheese</string>
+    <string name="noodles">Noodles</string>
+    <string name="paratha">Paratha</string>
+
+
+</resources>
