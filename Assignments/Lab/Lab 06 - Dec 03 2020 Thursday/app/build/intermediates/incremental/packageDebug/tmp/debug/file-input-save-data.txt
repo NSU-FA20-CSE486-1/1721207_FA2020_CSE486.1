@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Sat Dec 05 17:56:18 BDT 2020
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\user\\Documents\\GitHub\\1721207_FA2020_CSE486.1\\Assignments\\Lab\\Lab 06 - Dec 03 2020 Thursday\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+0.set=DEX
+count=1
