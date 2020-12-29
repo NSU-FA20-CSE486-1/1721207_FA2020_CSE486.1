@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Messaging</string>
+    <string name="encrp_sender_but">Encrypt and Send</string>
+    <string name="dec_box">Decrypt Screen</string>
+    <string name="dis_secret">Enter the secret code</string>
+    <string name="txt_message">Type your message here!</string>
+    <string name="rec_phone">Enter the phone number</string>
+    <string name="enc_box">Encryption App</string>
+    <string name="iconimagecontent">TODO</string>
+    <string name="cypher_text">cypher text</string>
+    <string name="decrypt">decrypt</string>
+    <string name="screenicon">TODO</string>
+</resources>

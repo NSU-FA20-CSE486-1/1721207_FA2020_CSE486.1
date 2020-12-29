@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DecActivity">
+
+    <TextView
+        android:id="@+id/tv_encryption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginEnd="153dp"
+        android:text="@string/dec_box"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <EditText
+        android:id="@+id/ency_msg_text"
+        android:layout_width="389dp"
+        android:layout_height="163dp"
+        android:ems="160"
+        android:gravity="top"
+        android:hint="@string/cypher_text"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="12sp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.90"
+        tools:layout_editor_absoluteY="270dp" />
+
+    <Button
+        android:id="@+id/decrypt_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/decrypt"
+        app:layout_constraintEnd_toEndOf="@+id/ency_msg_text"
+        app:layout_constraintStart_toStartOf="@+id/ency_msg_text"
+        tools:layout_editor_absoluteY="448dp" />
+
+    <TextView
+        android:id="@+id/tv_output"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ency_msg_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ency_msg_text"
+        app:layout_constraintTop_toBottomOf="@+id/decrypt_button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="187dp"
+        android:layout_height="173dp"
+        android:src="@drawable/images"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="84dp"
+        android:contentDescription="@string/screenicon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

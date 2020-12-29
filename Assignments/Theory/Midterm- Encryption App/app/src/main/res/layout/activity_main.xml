@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_encryption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="153dp"
+        android:text="@string/enc_box"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/recipient_phone"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/rec_phone"
+        android:importantForAutofill="no"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:padding="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/encryp_code_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <EditText
+        android:id="@+id/ency_msg_text"
+        android:layout_width="369dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="48dp"
+        android:gravity="top"
+        android:hint="@string/txt_message"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:maxLength="147"
+        android:maxLines="10"
+        android:minLines="6"
+        android:padding="12sp"
+        android:scrollbars="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/encryp_code_3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/encryp_code_3"
+        app:layout_constraintTop_toBottomOf="@+id/encryp_code_3" />
+
+    <EditText
+        android:id="@+id/encryp_code_3"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="top"
+        android:hint="@string/dis_secret"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLength="3"
+        android:nestedScrollingEnabled="true"
+        android:padding="16sp"
+        android:singleLine="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/ency_msg_text"
+        app:layout_constraintEnd_toEndOf="@+id/recipient_phone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/recipient_phone" />
+
+    <Button
+        android:id="@+id/encrypt_button"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/encrp_sender_but"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/decrypt_button"
+        app:layout_constraintEnd_toEndOf="@+id/encryp_code_3"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="@+id/encryp_code_3" />
+
+    <Button
+        android:id="@+id/decrypt_button"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="@string/dec_box"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/encrypt_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/encrypt_button" />
+
+    <ImageView
+        android:id="@+id/screen_icon"
+        android:layout_width="198dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/recipient_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_encryption"
+        app:srcCompat="@drawable/images"
+        android:contentDescription="@string/iconimagecontent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

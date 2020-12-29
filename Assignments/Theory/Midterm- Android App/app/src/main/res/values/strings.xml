@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">MidtermAssignmentApp</string>
-    <string name="mainactivity_title"Encrypted Messaging App</string>
-    <string name="mainactivity_alphanumeric_hint"Enter the key</string>
-    <string name="mainactivity_recipientnumber_hint"Receivers number</string>
-    <string name="mainactivity_message_hint"Type the message here</string>
-</resources>
