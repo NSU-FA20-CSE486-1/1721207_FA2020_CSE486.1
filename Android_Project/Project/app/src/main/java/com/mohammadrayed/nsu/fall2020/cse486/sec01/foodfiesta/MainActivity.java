@@ -17,14 +17,14 @@ public class MainActivity extends AppCompatActivity {
     Intent launchDashboard = new Intent(this, DashboardActivity.class);
 
     public void identify_credentials(View view) {
-        int teststoredphone= 01765910669;
+        String teststoredphone= "01765910669";
         String teststoredpassword= "mypassword1234";
 
-        int phonenumber = view.findViewById(R.id.login_phone);
+        String phonenumber = view.findViewById(R.id.login_phone);
         String password = view.findViewById(R.id.login_password);
 
-        if (phonenumber==teststoredphone && password = teststoredpassword) {
-            StartActivity(DashboardActivity);
+        if ( phonenumber == teststoredphone && password == teststoredpassword) {
+            startActivity(DashboardActivity);
         }
     }
 }
