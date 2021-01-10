@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         String password = view.findViewById(R.id.login_password);
 
         if ( phonenumber == teststoredphone && password == teststoredpassword) {
-            startActivity(DashboardActivity);
+            startActivity(launchDashboard);
         }
     }
 }
