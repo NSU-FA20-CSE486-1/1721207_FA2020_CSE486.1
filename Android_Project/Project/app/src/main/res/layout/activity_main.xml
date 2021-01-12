@@ -10,13 +10,14 @@
         android:id="@+id/login_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
         android:ems="10"
         android:hint="@string/customer_login_username_hint"
         android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/login_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="310dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/login_password"
@@ -32,10 +33,11 @@
         android:id="@+id/login_login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="identify_credentials"
         android:text="@string/customer_login_button_text"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="563dp"
-        android:onClick="identify_credentials"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="565dp" />
 
     <TextView
         android:id="@+id/login_register_button"
@@ -44,4 +46,16 @@
         android:text="@string/customer_register_button_text"
         tools:layout_editor_absoluteX="175dp"
         tools:layout_editor_absoluteY="488dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/group_39" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
