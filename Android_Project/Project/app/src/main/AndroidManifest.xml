@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodFiesta">
-        <activity android:name=".DashboardSellerActivity"></activity>
-        <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".UserProfile"></activity>
+        <activity android:name=".DashboardSellerActivity" />
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
