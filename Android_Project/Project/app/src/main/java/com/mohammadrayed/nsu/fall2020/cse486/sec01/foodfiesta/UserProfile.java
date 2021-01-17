@@ -15,9 +15,9 @@ public class UserProfile extends AppCompatActivity {
     }
 
     public void editProfile(View view) {
-        public static int EDIT_SUCCESSFUL = 1;
+      //  public static int EDIT_SUCCESSFUL = 1;
 
-        Intent launchEditProfileWindow = new Intent(this, EditProfile.class);
-        startActivityForResult(launchEditProfileWindow, EDIT_SUCCESSFUL);
+       // Intent launchEditProfileWindow = new Intent(this, EditProfile.class);
+        //startActivityForResult(launchEditProfileWindow, EDIT_SUCCESSFUL);
     }
 }
