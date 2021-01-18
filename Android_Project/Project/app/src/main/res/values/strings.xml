@@ -6,5 +6,10 @@
     <string name="customer_register_button_text">Retgister</string>
     <string name="user_profile_edit_button_text">Edit Profile</string>
     <string name="existing_account_text">No Account? Create Here! </string>
+    <string name="customer_transaction_header">Payments</string>
+    <string name="customer_payment_card">Your cards</string>
+    <string name="customer_payment_cash">Your cash credits</string>
+    <string name="customer_transaction_add_card">Add cards</string>
+    <string name="customer_transaction_current_cash_credit">Your current balance is: </string>
 
 </resources>
