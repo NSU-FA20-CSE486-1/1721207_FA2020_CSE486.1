@@ -32,13 +32,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        email= findViewById(R.id.login_email_input);
-        password= findViewById(R.id.login_password_input);
+        email= findViewById(R.id.register_phone);
+        password= findViewById(R.id.register_password);
         existaccountbtn= findViewById(R.id.login_existingaccount);
-        loginbtn= findViewById(R.id.login_button);
+        loginbtn= findViewById(R.id.register_button);
 
         fireA= FirebaseAuth.getInstance();
       //  fireEx= ((FirebaseAuthException) task.getException()).getErrorCode();
+
+        existaccountbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), RegisterUser.class));
+            }
+        });
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
