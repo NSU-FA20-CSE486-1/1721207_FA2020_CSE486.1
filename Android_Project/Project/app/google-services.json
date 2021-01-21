@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "98791430630",
+    "project_id": "food-fiesta-cse486-01-fall2020",
+    "storage_bucket": "food-fiesta-cse486-01-fall2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98791430630:android:320974cf9141550e3f9e27",
+        "android_client_info": {
+          "package_name": "com.mohammadrayed.nsu.fall2020.cse486.sec01.foodfiesta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98791430630-5d2tiu6d6vt825dr89sonf2706m95t57.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrT-whLG82fjsHx1_zVX9zkL1aEgGJnvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98791430630-5d2tiu6d6vt825dr89sonf2706m95t57.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
