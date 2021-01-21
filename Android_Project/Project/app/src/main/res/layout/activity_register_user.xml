@@ -74,6 +74,7 @@
         android:layout_marginRight="167dp"
         android:layout_marginBottom="168dp"
         android:text="@string/customer_register_button_text"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.807"

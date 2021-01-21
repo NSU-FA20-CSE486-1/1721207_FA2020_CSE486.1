@@ -23,9 +23,10 @@ import com.google.firebase.auth.FirebaseAuthException;
 
 public class RegisterUser extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    TextView email, full_name, password, address;
+    TextView email, full_name, password, address, existing_account, phone;
     ProgressBar prg_bar;
     Button register_button;
+    FirebaseAuth fireA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,26 +43,32 @@ public class RegisterUser extends AppCompatActivity implements AdapterView.OnIte
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
-        email= findViewById(R.id.register_phone);
+        email= findViewById(R.id.register_email);
+        phone= findViewById(R.id.register_phone);
         password= findViewById(R.id.register_password);
         full_name= findViewById(R.id.register_full_name);
         register_button = findViewById(R.id.register_button);
+        existing_account = findViewById(R.id.login_existingaccount);
+        address = findViewById(R.id.register_address);
 
         fireA= FirebaseAuth.getInstance();
         //  fireEx= ((FirebaseAuthException) task.getException()).getErrorCode();
 
-        existaccountbtn.setOnClickListener(new View.OnClickListener() {
+       existing_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), RegisterUser.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
 
-        loginbtn.setOnClickListener(new View.OnClickListener() {
+        register_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String Email= email.getText().toString().trim();
                 String Password= password.getText().toString().trim();
+                String Full_name= full_name.getText().toString().trim();
+                String Address= address.getText().toString().trim();
+                String Phone= phone.getText().toString().trim();
 
                 if(TextUtils.isEmpty(Email)){
                     email.setError("Email is empty");
@@ -71,15 +78,32 @@ public class RegisterUser extends AppCompatActivity implements AdapterView.OnIte
                     password.setError("Password is empty");
                     return;
                 }
+
+                if(TextUtils.isEmpty(Full_name)){
+                    email.setError("Full Name is empty");
+                    return;
+                }
+                if(TextUtils.isEmpty(Address)){
+                    password.setError("Address is empty");
+                    return;
+                } if(TextUtils.isEmpty(Phone)){
+                    password.setError("Phone number is empty");
+                    return;
+                }
+                if(Phone.length() < 11){
+                    password.setError("Number is invalid");
+                    password.setText("");
+                    return;
+                }
                 if(Password.length() < 8){
                     password.setError("Password is less than 8 characters");
                     password.setText("");
                     return;
                 }
 
-                login_progressbar.setVisibility(View.VISIBLE);
+                //_progressbar.setVisibility(View.VISIBLE);
 
-                fireA.signInWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                fireA.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
@@ -90,28 +114,15 @@ public class RegisterUser extends AppCompatActivity implements AdapterView.OnIte
 
                             switch (errorMsg) {
 
-                                case "ERROR_INVALID_CREDENTIAL":
-                                    Toast.makeText(MainActivity.this, "Invalid Credentials. Try again.", Toast.LENGTH_LONG).show();
-                                    break;
-
                                 case "ERROR_INVALID_EMAIL":
-                                    Toast.makeText(MainActivity.this, "Invalid Email.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(RegisterUser.this, "Invalid Email.", Toast.LENGTH_LONG).show();
                                     email.setError("The email is incorrect.");
                                     break;
 
-                                case "ERROR_WRONG_PASSWORD":
-                                    Toast.makeText(MainActivity.this, "The password is invalid or the user does not have a password.", Toast.LENGTH_LONG).show();
-                                    password.setError("password is incorrect ");
-                                    password.setText("");
-                                    break;
-
                                 case "ERROR_ACCOUNT_EXISTS_WITH_DIFFERENT_CREDENTIAL":
-                                    Toast.makeText(MainActivity.this, "An account already exists with that email", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(RegisterUser.this, "An account already exists with that email", Toast.LENGTH_LONG).show();
                                     break;
 
-                                case "ERROR_USER_NOT_FOUND":
-                                    Toast.makeText(MainActivity.this, "No user with provided credentials found", Toast.LENGTH_LONG).show();
-                                    break;
                             }
                         }
 
@@ -121,15 +132,14 @@ public class RegisterUser extends AppCompatActivity implements AdapterView.OnIte
 
         });
     }
+
     @Override
-    public void onItemSelected(AdapterView<?> parent, View v, int position,
-                               long id) {
-        // TODO Auto-generated method stub
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
     }
 
     @Override
-    public void onNothingSelected(AdapterView<?> arg0) {
-        // TODO Auto-generated method stub
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
