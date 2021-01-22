@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Fri Jan 22 20:15:46 BDT 2021
+1.base=C\:\\Users\\user\\Documents\\Android-Developer-Fundamentals-Version-2-master\\7.2_AsyncTask_and_AsyncTaskLoader\\WhoWroteItLoaderCC\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=C\:\\Users\\user\\Documents\\Android-Developer-Fundamentals-Version-2-master\\7.2_AsyncTask_and_AsyncTaskLoader\\WhoWroteItLoaderCC\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+1.path=classes.dex
